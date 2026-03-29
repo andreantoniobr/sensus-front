@@ -15,7 +15,7 @@ import {
   TableIcon,
   UserCircleIcon,
 } from "../icons";
-import { useSidebar } from "../context/SidebarContext";
+import { useSidebar } from "../lib/context/SidebarContext";
 import SidebarWidget from "./SidebarWidget";
 
 type NavItem = {
@@ -311,21 +311,19 @@ const AppSidebar: React.FC = () => {
                 src="/images/logo/logo.svg"
                 alt="Logo"
                 width={150}
-                height={40}
               />
               <img
                 className="hidden dark:block"
                 src="/images/logo/logo-dark.svg"
                 alt="Logo"
                 width={150}
-                height={40}
               />
             </>
           ) : (
             <img
               src="/images/logo/logo-icon.svg"
               alt="Logo"
-              width={32}
+              width={46}
               height={32}
             />
           )}

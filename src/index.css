@@ -1,5 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap")
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap")
 layer(base);
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 
 @import "tailwindcss";
 
@@ -7,7 +9,8 @@ layer(base);
 
 @theme {
   --font-*: initial;
-  --font-outfit: Outfit, sans-serif;
+  --font-inter: Inter, sans-serif;
+  --font-space: "Space Grotesk";
 
   --breakpoint-*: initial;
   --breakpoint-2xsm: 375px;
@@ -17,7 +20,7 @@ layer(base);
   --breakpoint-md: 768px;
   --breakpoint-lg: 1024px;
   --breakpoint-xl: 1280px;
-  --breakpoint-2xl: 1536px;
+  --breakpoint-2xl: 1536px; 
 
   --text-title-2xl: 72px;
   --text-title-2xl--line-height: 90px;
@@ -76,7 +79,7 @@ layer(base);
   --color-gray-500: #667085;
   --color-gray-600: #475467;
   --color-gray-700: #344054;
-  --color-gray-800: #1d2939;
+  --color-gray-800: #2C3847;
   --color-gray-900: #101828;
   --color-gray-950: #0c111d;
   --color-gray-dark: #1a2231;
@@ -163,6 +166,15 @@ layer(base);
   --z-index-9999: 9999;
   --z-index-99999: 99999;
   --z-index-999999: 999999;
+
+  
+
+  
+  
+  
+  --shadow-soft-md: 0 4px 10px -4px hsla(213, 80%, 50%, .15);
+  --shadow-soft-lg: 0 4px 20px -4px hsla(213, 80%, 50%, .15);
+  --shadow-blue-bottom-md: 0 4px 10px -4px hsla(213, 80%, 50%, .15);
 }
 
 /*
@@ -186,7 +198,10 @@ layer(base);
     cursor: pointer;
   }
   body {
-    @apply relative font-normal font-outfit z-1 bg-gray-50;
+    @apply relative font-normal font-inter z-1 bg-custom-blue-50;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-space;
   }
 }
 
@@ -789,4 +804,59 @@ span.flatpickr-weekday,
 
 .simplebar-scrollbar.simplebar-visible:before {
   @apply opacity-100;
+}
+
+
+
+@utility bg-custom-blue-50 {
+  background-color: #F8FAFC;
+}
+
+@utility bg-custom-blue-100 {
+  background-color: #EDF4FB;
+}
+
+@utility bg-custom-blue-200 {
+  background-color: #E9EFF4;
+}
+
+@utility text-custom-blue-100 {
+  color: #6C7C93;
+}
+
+@utility border-custom-blue-100 {
+  border-color: #E9EFF4;
+}
+
+@utility border-custom-blue-200 {
+  border-color: #D7E0EA;
+}
+
+
+
+@utility shadow-soft-md {
+  box-shadow: var(--shadow-soft-md);
+}
+
+
+@utility shadow-soft-lg {
+  box-shadow: var(--shadow-soft-lg);
+}
+
+
+@utility shadow-blue-bottom-md {
+  box-shadow: var(--shadow-blue-bottom-md);
+}
+
+@utility font-space {
+  font-family: var(--font-space);
+}
+
+
+@utility bg-gradient-1 {
+  background: linear-gradient(135deg, hsl(200 85% 55%), hsl(213 80% 50%));
+}
+
+@utility bg-gradient-2 {
+  background: linear-gradient(135deg, hsl(213 80% 50%), hsl(200 85% 55%));
 }

@@ -20,7 +20,6 @@ import {
 } from "react-icons/hi2";
 
 import { useSidebar } from "../lib/context/SidebarContext";
-import SidebarWidget from "./SidebarWidget";
 
 type NavItem = {
   name: string;

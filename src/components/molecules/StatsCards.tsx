@@ -1,4 +1,4 @@
-import StatCard from "../../atoms/StatsCard";
+import StatCard from "../atoms/StatsCard";
 import { HiOutlineClock } from "react-icons/hi2";
 import { HiOutlineCheckCircle } from "react-icons/hi2";
 import { HiOutlineCodeBracket } from "react-icons/hi2";

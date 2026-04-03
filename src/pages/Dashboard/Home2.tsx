@@ -9,7 +9,7 @@ import StatsCards from "../../components/molecules/StatsCards";
 
 
 import QuestionListCard from "../../components/atoms/QuestionListCard";
-import RecentActivityCard from "../../components/atoms/RecentActivityCard"; 
+import RecentActivityCard from "../../components/molecules/RecentActivityCard"; 
 import ChalengeDayCard from "../../components/atoms/ChalengeDayCard";
 
 import { AiOutlinePython } from "react-icons/ai";

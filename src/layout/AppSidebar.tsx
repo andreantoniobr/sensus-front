@@ -1,10 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router";
 
-import {
-  ChevronDownIcon,
-  HorizontaLDots,
-} from "../icons";
+import { ChevronDownIcon, HorizontaLDots } from "../icons";
 
 import {
   HiOutlineHome,
@@ -17,6 +14,7 @@ import {
   HiOutlineQuestionMarkCircle,
   HiOutlineCodeBracket,
   HiOutlineTrophy,
+  HiSquares2X2,
 } from "react-icons/hi2";
 
 import { useSidebar } from "../lib/context/SidebarContext";
@@ -33,6 +31,76 @@ const navItems: NavItem[] = [
     icon: <HiOutlineHome />,
     name: "Dashboard",
     path: "/",
+  },
+    {
+    name: "Páginas",
+    icon: <HiSquares2X2 className="size-5" />,
+    subItems: [
+      {
+        name: "Login",
+        path: "/signin",
+      },
+      {
+        name: "Cadastro",
+        path: "/signup",
+      },
+      {
+        name: "Calendar",
+        path: "/calendar",
+      },
+      {
+        name: "User Profile",
+        path: "/profile",
+      },
+      {
+        name: "Form Elements",
+        path: "/form-elements",
+      },
+      {
+        name: "Basic Tables",
+        path: "/basic-tables",
+      },
+      {
+        name: "Blank Page",
+        path: "/blank",
+      },
+      {
+        name: "404 Error",
+        path: "/error-404",
+      },
+      {
+        name: "Line Chart",
+        path: "/line-chart",
+      },
+      {
+        name: "Bar Chart",
+        path: "/bar-chart",
+      },
+      {
+        name: "Alerts",
+        path: "/alerts",
+      },
+      {
+        name: "Avatar",
+        path: "/avatars",
+      },
+      {
+        name: "Badge",
+        path: "/badge",
+      },
+      {
+        name: "Buttons",
+        path: "/buttons",
+      },
+      {
+        name: "Images",
+        path: "/images",
+      },
+      {
+        name: "Videos",
+        path: "/videos",
+      },
+    ],
   },
   {
     icon: <HiOutlineClipboardDocumentList />,
@@ -82,6 +150,7 @@ const othersItems: NavItem[] = [
     name: "Ajuda",
     path: "/ajuda",
   },
+
 ];
 
 const AppSidebar: React.FC = () => {
@@ -93,14 +162,14 @@ const AppSidebar: React.FC = () => {
     index: number;
   } | null>(null);
   const [subMenuHeight, setSubMenuHeight] = useState<Record<string, number>>(
-    {}
+    {},
   );
   const subMenuRefs = useRef<Record<string, HTMLDivElement | null>>({});
 
   // const isActive = (path: string) => location.pathname === path;
   const isActive = useCallback(
     (path: string) => location.pathname === path,
-    [location.pathname]
+    [location.pathname],
   );
 
   useEffect(() => {
@@ -282,8 +351,8 @@ const AppSidebar: React.FC = () => {
           isExpanded || isMobileOpen
             ? "w-[290px]"
             : isHovered
-            ? "w-[290px]"
-            : "w-[90px]"
+              ? "w-[290px]"
+              : "w-[90px]"
         }
         ${isMobileOpen ? "translate-x-0" : "-translate-x-full"}
         lg:translate-x-0`}
@@ -357,7 +426,7 @@ const AppSidebar: React.FC = () => {
               {renderMenuItems(othersItems, "others")}
             </div>
           </div>
-        </nav>        
+        </nav>
       </div>
     </aside>
   );

@@ -1,4 +1,4 @@
-import RecentActivity from "../RecentActivity";
+import RecentActivity from "../atoms/RecentActivity";
 
 import { HiOutlineCheckCircle } from "react-icons/hi2";
 import { HiOutlineRocketLaunch } from "react-icons/hi2";

@@ -92,7 +92,7 @@ const othersItems: NavItem[] = [
   },
 ];
 
-const AppSidebar: React.FC = () => {
+const AppSidebar2: React.FC = () => {
   const { isExpanded, isMobileOpen, isHovered, setIsHovered } = useSidebar();
   const location = useLocation();
 
@@ -372,4 +372,4 @@ const AppSidebar: React.FC = () => {
   );
 };
 
-export default AppSidebar;
+export default AppSidebar2;

@@ -1,4 +1,4 @@
-import { useTheme } from "../../../lib/context/ThemeContext";
+import { useTheme } from "../../lib/context/ThemeContext";
 import { IoMoonOutline } from "react-icons/io5";
 import { IoSunnyOutline } from "react-icons/io5";
 

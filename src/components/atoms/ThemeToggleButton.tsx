@@ -1,4 +1,4 @@
-import { useTheme } from "../../../lib/context/ThemeContext";
+import { useTheme } from "../../lib/context/ThemeContext";
 import { HiOutlineSun } from "react-icons/hi2";
 import { HiOutlineMoon } from "react-icons/hi2";
 

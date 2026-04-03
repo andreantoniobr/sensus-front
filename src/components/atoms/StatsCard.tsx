@@ -22,7 +22,7 @@ function StatCard({
       className={`rounded-2xl border border-custom-blue-100 bg-white p-5 md:p-6 
       dark:border-gray-800 dark:bg-white/[0.03] shadow-soft-md ${className}`}
     >
-      <div className="flex gap-6">
+      <div className="flex gap-4">
         <div
           className={`flex items-center justify-center w-10 h-10 rounded-xl ${gradient} dark:bg-gray-800`}
         >

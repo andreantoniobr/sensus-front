@@ -26,7 +26,7 @@ function QuestionListCard({
       className={`rounded-2xl border border-custom-blue-100 bg-white p-5 md:p-6 
       dark:border-gray-800 dark:bg-white/[0.03] shadow-soft-md ${className}`}
     >
-      <div className="grid grid-cols-[auto_1fr] gap-6">
+      <div className="grid grid-cols-[auto_1fr] gap-4">
         <div
           className={`flex items-center justify-center w-15 h-15 rounded-xl ${gradient} dark:bg-gray-800`}
         >

@@ -8,7 +8,7 @@ type RecentActivityProps = {
 
 function RecentActivity({ icon: Icon, title, time }: RecentActivityProps) {
   return (
-    <div className="grid grid-cols-[auto_1fr] gap-6 py-4">
+    <div className="grid grid-cols-[auto_1fr] gap-4 py-4">
       <div
         className={`flex items-center justify-center w-9 h-9 rounded-xl bg-custom-blue-200 dark:bg-gray-800`}
       >

@@ -24,7 +24,7 @@ function QuestionListCard({
   return (
     <div
       className={`rounded-2xl border border-custom-blue-100 bg-white p-5 md:p-6 
-      dark:border-gray-800 dark:bg-white/[0.03] shadow-soft-md ${className}`}
+      dark:border-gray-800 dark:bg-white/[0.03] shadow-soft-md hover:-translate-y-1 transition-all duration-300 group cursor-pointer ${className}`}
     >
       <div className="grid grid-cols-[auto_1fr] gap-4">
         <div

@@ -124,7 +124,7 @@ export default function SignUpForm() {
                 </div>
                 {/* <!-- Button --> */}
                 <div>
-                  <Button className="w-full font-space font-semibold" size="sm" fontSize="md">
+                  <Button className="w-full font-space font-semibold" size="sm">
                     <HiOutlineUserPlus size="20" />
                     Criar Conta
                   </Button>

@@ -6,6 +6,7 @@ import "flatpickr/dist/flatpickr.css";
 import App from "./App.tsx";
 import { AppWrapper } from "./components/common/PageMeta.tsx";
 import { ThemeProvider } from "./lib/context/ThemeContext.tsx";
+import "highlight.js/styles/github.css";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>

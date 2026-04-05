@@ -45,6 +45,18 @@ const navItems: NavItem[] = [
         path: "/signup",
       },
       {
+        name: "Adicionar Critério",
+        path: "/adicionar-criterio",
+      },
+      {
+        name: "Adicionar Questão",
+        path: "/adicionar-questao",
+      },
+      {
+        name: "adicionar Avaliação",
+        path: "/adicionar-avaliacao",
+      },
+      {
         name: "Calendar",
         path: "/calendar",
       },

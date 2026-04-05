@@ -1,6 +1,6 @@
 import React, { useMemo } from "react";
 import { Link } from "react-router";
-import AuthHeroSVG from "./AuthHeroSVG";
+import AuthHeroSVG from "../../atoms/AuthHeroSVG";
 
 interface AuthHeroProps {
   heroTitle?: string;

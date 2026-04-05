@@ -1,7 +1,7 @@
 import PageMeta from "../../components/common/PageMeta";
-import AuthLayout from "./AuthPageLayout";
+import AuthLayout from "../../components/molecules/auth/AuthPageLayout";
 import SignInForm from "../../components/molecules/auth/SignInForm";
-import AuthHero from "./AuthHero";
+import AuthHero from "../../components/molecules/auth/AuthHero";
 
 export default function SignIn() {
   return (

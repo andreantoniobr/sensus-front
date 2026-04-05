@@ -18,6 +18,12 @@ import Blank from "./pages/Blank";
 import AppLayout from "./layout/AppLayout";
 import { ScrollToTop } from "./components/common/ScrollToTop";
 import Home from "./pages/Dashboard/Home";
+import AddQuestionCriteria from "./pages/AddQuestionCriteria";
+import AddQuestion from "./pages/AddQuestion";
+import AddAssessment from "./pages/AddAssessment";
+import Trails from "./pages/Trails";
+import QuestionListPage from "./pages/QuestionsListPage";
+import RankingPage from "./pages/RankingPage";
 
 export default function App() {
   return (
@@ -51,6 +57,17 @@ export default function App() {
             {/* Charts */}
             <Route path="/line-chart" element={<LineChart />} />
             <Route path="/bar-chart" element={<BarChart />} />
+
+            <Route path="/listas" element={<QuestionListPage />} />
+            <Route path="/trilhas" element={<Trails />} />
+            <Route path="/ranking" element={<RankingPage />} />
+
+            {/* Teacher */}
+            <Route path="/adicionar-criterio" element={<AddQuestionCriteria />} />
+            <Route path="/adicionar-questao" element={<AddQuestion />} />
+            <Route path="/adicionar-avaliacao" element={<AddAssessment />} />
+
+            
           </Route>
 
           {/* Auth Layout */}

@@ -85,7 +85,7 @@ export default function SignInForm() {
                   </Link>
                 </div>
                 <div>
-                  <Button className="w-full font-space font-semibold" size="sm" fontSize="md">
+                  <Button className="w-full font-space font-semibold" size="sm">
                     <HiOutlineArrowRightEndOnRectangle size="20" /> Entrar
                   </Button>
                 </div>

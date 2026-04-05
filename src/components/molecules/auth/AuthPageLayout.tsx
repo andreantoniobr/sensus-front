@@ -1,6 +1,5 @@
 import React from "react";
-import { Link } from "react-router";
-import ThemeTogglerTwo from "../../components/atoms/ThemeTogglerButtonTwo";
+import ThemeTogglerTwo from "../../atoms/ThemeTogglerButtonTwo";
 
 export default function AuthLayout({
   authHero,

@@ -180,7 +180,7 @@ const difficultyLabels: Record<string, string> = {
   avancado: "Avançado",
 };
 
-const Trails = () => {
+const TrailsPage = () => {
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState<Category>("all");
   const [difficulty, setDifficulty] = useState<Difficulty>("all");
@@ -333,4 +333,4 @@ const Trails = () => {
   );
 };
 
-export default Trails;
+export default TrailsPage;

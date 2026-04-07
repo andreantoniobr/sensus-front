@@ -1,3 +1,5 @@
+
+
 // Tipo de resposta de paginação da API (usado com React Query)
 export interface PaginatedResponse<T> {
   count: number;

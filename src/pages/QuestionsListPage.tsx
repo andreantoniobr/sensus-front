@@ -160,7 +160,6 @@ const QuestionListPage = () => {
         title="Listas de Questões | Sensus"
         description="Resolva listas de questões filtradas por dificuldade."
       />
-
       <PageBreadcrumb pageTitle="Listas de Questões" />
 
       <div>

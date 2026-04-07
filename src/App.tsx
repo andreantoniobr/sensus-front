@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router";
 import SignIn from "./pages/AuthPages/SignIn";
 import SignUp from "./pages/AuthPages/SignUp";
 import NotFound from "./pages/OtherPage/NotFound";
-import UserProfiles from "./pages/UserProfiles";
+import UserProfilesPage from "./pages/UserProfilesPage";
 import Videos from "./pages/UiElements/Videos";
 import Images from "./pages/UiElements/Images";
 import Alerts from "./pages/UiElements/Alerts";
@@ -11,7 +11,7 @@ import Avatars from "./pages/UiElements/Avatars";
 import Buttons from "./pages/UiElements/Buttons";
 import LineChart from "./pages/Charts/LineChart";
 import BarChart from "./pages/Charts/BarChart";
-import Calendar from "./pages/Calendar";
+import CalendarPage from "./pages/CalendarPage";
 import BasicTables from "./pages/Tables/BasicTables";
 import FormElements from "./pages/Forms/FormElements";
 import Blank from "./pages/Blank";
@@ -19,11 +19,13 @@ import AppLayout from "./layout/AppLayout";
 import { ScrollToTop } from "./components/common/ScrollToTop";
 import Home from "./pages/Dashboard/Home";
 import AddQuestionCriteria from "./pages/AddQuestionCriteria";
-import AddQuestion from "./pages/AddQuestion";
-import AddAssessment from "./pages/AddAssessment";
-import Trails from "./pages/Trails";
+import AddQuestionPage from "./pages/AddQuestionPage";
+import AddAssessmentPage from "./pages/AddAssessmentPage";
+import TrailsPage from "./pages/TrailsPage";
 import QuestionListPage from "./pages/QuestionsListPage";
 import RankingPage from "./pages/RankingPage";
+import AssessmentsListPage from "./pages/AssessmentsListPage";
+import ConstructionPage from "./pages/ConstructionPage";
 
 export default function App() {
   return (
@@ -36,8 +38,8 @@ export default function App() {
             <Route index path="/" element={<Home />} />
 
             {/* Others Page */}
-            <Route path="/profile" element={<UserProfiles />} />
-            <Route path="/calendar" element={<Calendar />} />
+            <Route path="/profile" element={<UserProfilesPage />} />
+            <Route path="/calendar" element={<CalendarPage />} />
             <Route path="/blank" element={<Blank />} />
 
             {/* Forms */}
@@ -59,15 +61,17 @@ export default function App() {
             <Route path="/bar-chart" element={<BarChart />} />
 
             <Route path="/listas" element={<QuestionListPage />} />
-            <Route path="/trilhas" element={<Trails />} />
+            <Route path="/avaliacoes" element={<AssessmentsListPage />} />
+            <Route path="/trilhas" element={<TrailsPage />} />
+            <Route path="/calendario" element={<CalendarPage />} />
             <Route path="/ranking" element={<RankingPage />} />
 
             {/* Teacher */}
             <Route path="/adicionar-criterio" element={<AddQuestionCriteria />} />
-            <Route path="/adicionar-questao" element={<AddQuestion />} />
-            <Route path="/adicionar-avaliacao" element={<AddAssessment />} />
+            <Route path="/adicionar-questao" element={<AddQuestionPage />} />
+            <Route path="/adicionar-avaliacao" element={<AddAssessmentPage />} />
 
-            
+            <Route path="/construcao" element={<ConstructionPage />} />
           </Route>
 
           {/* Auth Layout */}

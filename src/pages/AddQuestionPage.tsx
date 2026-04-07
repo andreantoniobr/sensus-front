@@ -13,7 +13,7 @@ import { useState } from "react";
 import Button from "../components/ui/button/Button";
 import LineAndTextSeparator from "../components/atoms/LineAndTextSeparator";
 
-export default function AddQuestion() {
+export default function AddQuestionPage() {
   const options = [
     { value: "python", label: "Python" },
     { value: "java", label: "Java" },

@@ -12,7 +12,7 @@ import { useState } from "react";
 import Button from "../components/ui/button/Button";
 import LineAndTextSeparator from "../components/atoms/LineAndTextSeparator";
 
-export default function AddAssessment() {
+export default function AddAssessmentPage() {
   const [questions, setQuestions] = useState<QuestionItem[]>([
     { id: "1", text: "Correção de Uso Correto de Lista no Python", score: 10 },
     { id: "2", text: "Criação de Função e Parametros", score: 5 },

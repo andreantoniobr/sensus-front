@@ -22,7 +22,7 @@ export default function AddButton({
       onClick={onClick}
       disabled={disabled}
     >
-      {icon ?? <HiOutlineInboxArrowDown size={20} />}
+      {icon ?? <HiOutlineInboxArrowDown size={16} />}
       <span>{children}</span>
     </Button>
   );

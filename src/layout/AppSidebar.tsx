@@ -55,63 +55,11 @@ const navItems: NavItem[] = [
       {
         name: "adicionar Avaliação",
         path: "/adicionar-avaliacao",
-      },
-      {
-        name: "Calendar",
-        path: "/calendar",
-      },
-      {
-        name: "User Profile",
-        path: "/profile",
-      },
-      {
-        name: "Form Elements",
-        path: "/form-elements",
-      },
-      {
-        name: "Basic Tables",
-        path: "/basic-tables",
-      },
-      {
-        name: "Blank Page",
-        path: "/blank",
-      },
+      },      
       {
         name: "404 Error",
         path: "/error-404",
-      },
-      {
-        name: "Line Chart",
-        path: "/line-chart",
-      },
-      {
-        name: "Bar Chart",
-        path: "/bar-chart",
-      },
-      {
-        name: "Alerts",
-        path: "/alerts",
-      },
-      {
-        name: "Avatar",
-        path: "/avatars",
-      },
-      {
-        name: "Badge",
-        path: "/badge",
-      },
-      {
-        name: "Buttons",
-        path: "/buttons",
-      },
-      {
-        name: "Images",
-        path: "/images",
-      },
-      {
-        name: "Videos",
-        path: "/videos",
-      },
+      },      
     ],
   },
   {
@@ -127,7 +75,7 @@ const navItems: NavItem[] = [
   {
     icon: <HiOutlineChartBar />,
     name: "Notas",
-    path: "/notas",
+    path: "/construcao",
   },
   {
     icon: <HiOutlineCodeBracket />,

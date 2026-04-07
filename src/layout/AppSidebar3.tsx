@@ -1,23 +1,22 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router";
 
-import { ChevronDownIcon, HorizontaLDots } from "../icons";
-
+// Assume these icons are imported from an icon library
 import {
-  HiOutlineHome,
-  HiOutlineClipboardDocumentList,
-  HiOutlineAcademicCap,
-  HiOutlineChartBar,
-  HiOutlineChartPie,
-  HiOutlineCalendarDays,
-  HiOutlineCog6Tooth,
-  HiOutlineQuestionMarkCircle,
-  HiOutlineCodeBracket,
-  HiOutlineTrophy,
-  HiSquares2X2,
-} from "react-icons/hi2";
-
+  BoxCubeIcon,
+  CalenderIcon,
+  ChevronDownIcon,
+  GridIcon,
+  HorizontaLDots,
+  ListIcon,
+  PageIcon,
+  PieChartIcon,
+  PlugInIcon,
+  TableIcon,
+  UserCircleIcon,
+} from "../icons";
 import { useSidebar } from "../lib/context/SidebarContext";
+import SidebarWidget from "./SidebarWidget";
 
 type NavItem = {
   name: string;
@@ -28,144 +27,72 @@ type NavItem = {
 
 const navItems: NavItem[] = [
   {
-    icon: <HiOutlineHome />,
+    icon: <GridIcon />,
     name: "Dashboard",
     path: "/",
   },
-    {
-    name: "Páginas",
-    icon: <HiSquares2X2 className="size-5" />,
+  {
+    icon: <CalenderIcon />,
+    name: "Calendar",
+    path: "/calendar",
+  },
+  {
+    icon: <UserCircleIcon />,
+    name: "User Profile",
+    path: "/profile",
+  },
+  {
+    name: "Forms",
+    icon: <ListIcon />,
+    subItems: [{ name: "Form Elements", path: "/form-elements", pro: false }],
+  },
+  {
+    name: "Tables",
+    icon: <TableIcon />,
+    subItems: [{ name: "Basic Tables", path: "/basic-tables", pro: false }],
+  },
+  {
+    name: "Pages",
+    icon: <PageIcon />,
     subItems: [
-      {
-        name: "Login",
-        path: "/signin",
-      },
-      {
-        name: "Cadastro",
-        path: "/signup",
-      },
-      {
-        name: "Adicionar Critério",
-        path: "/adicionar-criterio",
-      },
-      {
-        name: "Adicionar Questão",
-        path: "/adicionar-questao",
-      },
-      {
-        name: "adicionar Avaliação",
-        path: "/adicionar-avaliacao",
-      },
-      {
-        name: "Calendar",
-        path: "/calendar",
-      },
-      {
-        name: "User Profile",
-        path: "/profile",
-      },
-      {
-        name: "Form Elements",
-        path: "/form-elements",
-      },
-      {
-        name: "Basic Tables",
-        path: "/basic-tables",
-      },
-      {
-        name: "Blank Page",
-        path: "/blank",
-      },
-      {
-        name: "404 Error",
-        path: "/error-404",
-      },
-      {
-        name: "Line Chart",
-        path: "/line-chart",
-      },
-      {
-        name: "Bar Chart",
-        path: "/bar-chart",
-      },
-      {
-        name: "Alerts",
-        path: "/alerts",
-      },
-      {
-        name: "Avatar",
-        path: "/avatars",
-      },
-      {
-        name: "Badge",
-        path: "/badge",
-      },
-      {
-        name: "Buttons",
-        path: "/buttons",
-      },
-      {
-        name: "Images",
-        path: "/images",
-      },
-      {
-        name: "Videos",
-        path: "/videos",
-      },
+      { name: "Blank Page", path: "/blank", pro: false },
+      { name: "404 Error", path: "/error-404", pro: false },
     ],
-  },
-  {
-    icon: <HiOutlineClipboardDocumentList />,
-    name: "Minhas Listas",
-    path: "/listas",
-  },
-  {
-    icon: <HiOutlineAcademicCap />,
-    name: "Atividades Avaliativas",
-    path: "/avaliacoes",
-  },
-  {
-    icon: <HiOutlineChartBar />,
-    name: "Notas",
-    path: "/notas",
-  },
-  {
-    icon: <HiOutlineCodeBracket />,
-    name: "Trilhas de Aprendizado",
-    path: "/trilhas",
-  },
-  {
-    icon: <HiOutlineChartPie />,
-    name: "Meu Progresso",
-    path: "/progresso",
-  },
-  {
-    icon: <HiOutlineCalendarDays />,
-    name: "Calendário",
-    path: "/calendario",
   },
 ];
 
 const othersItems: NavItem[] = [
   {
-    icon: <HiOutlineTrophy />,
-    name: "Ranking",
-    path: "/ranking",
+    icon: <PieChartIcon />,
+    name: "Charts",
+    subItems: [
+      { name: "Line Chart", path: "/line-chart", pro: false },
+      { name: "Bar Chart", path: "/bar-chart", pro: false },
+    ],
   },
   {
-    icon: <HiOutlineCog6Tooth />,
-    name: "Configurações",
-    path: "/configuracoes",
+    icon: <BoxCubeIcon />,
+    name: "UI Elements",
+    subItems: [
+      { name: "Alerts", path: "/alerts", pro: false },
+      { name: "Avatar", path: "/avatars", pro: false },
+      { name: "Badge", path: "/badge", pro: false },
+      { name: "Buttons", path: "/buttons", pro: false },
+      { name: "Images", path: "/images", pro: false },
+      { name: "Videos", path: "/videos", pro: false },
+    ],
   },
   {
-    icon: <HiOutlineQuestionMarkCircle />,
-    name: "Ajuda",
-    path: "/ajuda",
+    icon: <PlugInIcon />,
+    name: "Authentication",
+    subItems: [
+      { name: "Sign In", path: "/signin", pro: false },
+      { name: "Sign Up", path: "/signup", pro: false },
+    ],
   },
-
 ];
 
-const AppSidebar2: React.FC = () => {
+const AppSidebar3: React.FC = () => {
   const { isExpanded, isMobileOpen, isHovered, setIsHovered } = useSidebar();
   const location = useLocation();
 
@@ -174,14 +101,14 @@ const AppSidebar2: React.FC = () => {
     index: number;
   } | null>(null);
   const [subMenuHeight, setSubMenuHeight] = useState<Record<string, number>>(
-    {},
+    {}
   );
   const subMenuRefs = useRef<Record<string, HTMLDivElement | null>>({});
 
   // const isActive = (path: string) => location.pathname === path;
   const isActive = useCallback(
     (path: string) => location.pathname === path,
-    [location.pathname],
+    [location.pathname]
   );
 
   useEffect(() => {
@@ -363,8 +290,8 @@ const AppSidebar2: React.FC = () => {
           isExpanded || isMobileOpen
             ? "w-[290px]"
             : isHovered
-              ? "w-[290px]"
-              : "w-[90px]"
+            ? "w-[290px]"
+            : "w-[90px]"
         }
         ${isMobileOpen ? "translate-x-0" : "-translate-x-full"}
         lg:translate-x-0`}
@@ -430,7 +357,7 @@ const AppSidebar2: React.FC = () => {
                 }`}
               >
                 {isExpanded || isHovered || isMobileOpen ? (
-                  "Outros"
+                  "Others"
                 ) : (
                   <HorizontaLDots />
                 )}
@@ -439,9 +366,10 @@ const AppSidebar2: React.FC = () => {
             </div>
           </div>
         </nav>
+        {isExpanded || isHovered || isMobileOpen ? <SidebarWidget /> : null}
       </div>
     </aside>
   );
 };
 
-export default AppSidebar2;
+export default AppSidebar3;

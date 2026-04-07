@@ -15,7 +15,7 @@ export default function StatsCards() {
       <StatCard
         icon={HiOutlineCheckCircle}
         value="7"
-        label="Tilhas Concluidas"
+        label="Trilhas Concluídas"
       />
       <StatCard
         icon={HiOutlineCodeBracket}

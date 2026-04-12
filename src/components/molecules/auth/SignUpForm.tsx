@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import Label from "../../form/Label";
 import Input from "../../form/input/InputField";
 import Checkbox from "../../form/input/Checkbox";
@@ -16,6 +16,8 @@ import { HiOutlineUserPlus } from "react-icons/hi2";
 export default function SignUpForm() {
   const [showPassword, setShowPassword] = useState(false);
   const [isChecked, setIsChecked] = useState(false);
+  const navigate = useNavigate();
+
   return (
     <div className="flex flex-col flex-1 w-full overflow-y-auto lg:w-1/2 no-scrollbar">
       <div className="w-full max-w-md mx-auto mb-5 sm:pt-10">
@@ -108,14 +110,14 @@ export default function SignUpForm() {
                   <p className="inline-block text-sm text-custom-blue-100 dark:text-gray-400">
                     Declaro que aceito os{" "}
                     <Link
-                      to="/signin"
+                      to="/login"
                       className="text-brand-500 hover:text-brand-600 dark:text-white"
                     >
                       Termos de Uso,
                     </Link>{" "}
                     e a{" "}
                     <Link
-                      to="/signin"
+                      to="/login"
                       className="text-brand-500 hover:text-brand-600 dark:text-white"
                     >
                       Política de Privacidade
@@ -136,7 +138,7 @@ export default function SignUpForm() {
               <p className="text-sm font-normal text-center text-gray-700 dark:text-gray-400">
                 Já possui uma conta? {""}
                 <Link
-                  to="/signin"
+                  to="/login"
                   className="text-brand-500 hover:text-brand-600 dark:text-brand-400"
                 >
                   Entrar
@@ -147,6 +149,7 @@ export default function SignUpForm() {
             <LineAndTextSeparator label="Ou" />
             <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-5">
               <Button
+                onClick={() => navigate("/")}
                 className="w-full"
                 variant="secondary"
                 size="sm"
@@ -162,7 +165,7 @@ export default function SignUpForm() {
                 startIcon={<XIcon />}
               >
                 Criar com o X
-              </Button>             
+              </Button>
             </div>
           </div>
         </div>

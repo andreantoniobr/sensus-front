@@ -3,12 +3,14 @@ import StatsCards from "../../components/molecules/StatsCards";
 import QuestionListCard from "../../components/atoms/QuestionListCard";
 import RecentActivityCard from "../../components/molecules/RecentActivityCard";
 import ChalengeDayCard from "../../components/atoms/ChalengeDayCard";
+import { useNavigate } from "react-router";
 
 import { AiOutlinePython } from "react-icons/ai";
 import { AiOutlineJavaScript } from "react-icons/ai";
 import { LiaReact } from "react-icons/lia";
 
 export default function Home() {
+  const navigate = useNavigate();
   return (
     <>
       <PageMeta
@@ -30,6 +32,7 @@ export default function Home() {
             Minha Lista de Questões
           </h2>
           <QuestionListCard
+            onClick={() => navigate("/listas/questoes")}
             icon={AiOutlinePython}
             iconColor="text-yellow-300"
             value="68"
@@ -38,6 +41,7 @@ export default function Home() {
             label="28 de 42 Desafios"
           />
           <QuestionListCard
+            onClick={() => navigate("/listas/questoes")}
             icon={AiOutlineJavaScript}
             iconColor="text-orange-300"
             value="35"
@@ -46,6 +50,7 @@ export default function Home() {
             label="13 de 38 desafios"
           />
           <QuestionListCard
+            onClick={() => navigate("/listas/questoes")}
             icon={LiaReact}
             iconColor="text-sky-300"
             value="12"

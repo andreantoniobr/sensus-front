@@ -1,3 +1,4 @@
+import { useState } from "react";
 import PageBreadcrumb from "../components/common/PageBreadCrumb";
 import PageMeta from "../components/common/PageMeta";
 import Input from "../components/form/input/InputField";
@@ -9,9 +10,8 @@ import CancelButton from "../components/atoms/CancelButton";
 import AddButton from "../components/atoms/AddButton";
 import QuestionList from "../components/atoms/QuestionList";
 import { QuestionItem } from "../components/atoms/QuestionList";
-import { useState } from "react";
+
 import Button from "../components/ui/button/Button";
-import LineAndTextSeparator from "../components/atoms/LineAndTextSeparator";
 
 export default function AddQuestionPage() {
   const options = [
@@ -31,7 +31,7 @@ export default function AddQuestionPage() {
   ]);
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-12">
       <PageMeta
         title="Adicionar Critério | Sensus - Plataforma de Avaliação Acadêmica"
         description="Acesse o Sensus para acompanhar suas disciplinas, resolver exercícios, participar de avaliações e receber feedback inteligente com apoio de IA."
@@ -60,58 +60,36 @@ export default function AddQuestionPage() {
         </FormField>
       </ComponentCard>
 
-      <div className="flex flex-col md:flex-row gap-6">
-        {/* Conteúdo principal */}
-        <div className="w-full md:flex-1">
-          <ComponentCard title="Critérios da Questão">
-               <div className="flex flex-col-reverse gap-3 w-full lg:flex-row lg:justify-end">
-              <Button
-                className="font-space font-semibold"
-                size="xs"
-                fontSize="xs"
-                variant="success"
-              >
-                Criar Nova Questão
-              </Button>
+      <ComponentCard
+        title="Critérios da Questão"
+        rightContent={
+          <>
+            <Button
+              className="font-space font-semibold"
+              size="xs"
+              fontSize="xs"
+              variant="success"
+            >
+              Criar Novo Critério
+            </Button>
 
-              <Button
-                className="font-space font-semibold"
-                variant="outline"
-                size="xs"
-                fontSize="xs"
-              >
-                Adicionar Questão do Banco
-              </Button>
-            </div>
-            <QuestionList items={questions} onChange={setQuestions} />
+            <Button
+              className="font-space font-semibold"
+              variant="outline"
+              size="xs"
+              fontSize="xs"
+            >
+              Adicionar Critério do Banco
+            </Button>
+          </>
+        }
+      >
+        <QuestionList items={questions} onChange={setQuestions} />
 
-            {/* <pre className="mt-6 text-xs bg-gray-100 p-3 rounded">
+        {/* <pre className="mt-6 text-xs bg-gray-100 p-3 rounded">
           {JSON.stringify(questions, null, 2)}
         </pre> */}
-
-         
-          </ComponentCard>
-        </div>
-
-        {/* Sidebar (≈ 1/5 da tela) */}
-        <div className="w-full md:w-1/5 p-5 xl:p-10 rounded-2xl border border-custom-blue-100 flex flex-col items-center justify-center">
-          <Button
-            className="w-full font-space font-semibold"
-            size="sm"
-            variant="success"
-          >
-            Nova Questão
-          </Button>
-          <LineAndTextSeparator label="ou" className="w-full"></LineAndTextSeparator>
-          <Button
-            className="w-full font-space font-semibold"
-            variant="outline"
-            size="sm"
-          >
-            Adicionar Questão do Banco
-          </Button>
-        </div>
-      </div>
+      </ComponentCard>
 
       <div className="flex flex-col-reverse gap-3 px-2 w-full lg:flex-row lg:justify-end">
         <CancelButton>Cancelar</CancelButton>

@@ -5,6 +5,7 @@ import PageBreadcrumb from "../components/common/PageBreadCrumb";
 import Button from "../components/ui/button/Button";
 import Input from "../components/form/input/InputField";
 import QuestionListCard from "../components/atoms/QuestionListCard";
+import { useNavigate } from "react-router";
 
 import {
   HiMagnifyingGlass,
@@ -143,6 +144,7 @@ const difficulties = [
 const QuestionListPage = () => {
   const [search, setSearch] = useState("");
   const [difficulty, setDifficulty] = useState<Difficulty>("all");
+  const navigate = useNavigate();
 
   const filtered = questions.filter((q) => {
     const matchSearch = q.title
@@ -214,6 +216,7 @@ const QuestionListPage = () => {
               transition={{ delay: i * 0.05 }}
             >
               <QuestionListCard
+                onClick={() => navigate("/listas/questoes")}
                 icon={q.icon}
                 iconColor={q.iconColor}
                 value={q.progress}

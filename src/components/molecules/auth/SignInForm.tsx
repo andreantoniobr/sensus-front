@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 
 import Label from "../../form/Label";
 import Input from "../../form/input/InputField";
@@ -17,6 +17,8 @@ import { HiOutlineArrowRightEndOnRectangle } from "react-icons/hi2";
 export default function SignInForm() {
   const [showPassword, setShowPassword] = useState(false);
   const [isChecked, setIsChecked] = useState(false);
+  const navigate = useNavigate();
+
   return (
     <div className="flex flex-col flex-1">
       <div className="w-full max-w-md pt-10 mx-auto">
@@ -95,7 +97,7 @@ export default function SignInForm() {
               <p className="text-sm font-normal text-center text-gray-700 dark:text-gray-400">
                 Não tem conta? {""}
                 <Link
-                  to="/signup"
+                  to="/cadastro"
                   className="text-brand-500 hover:text-brand-600 dark:text-brand-400"
                 >
                   Cadastre-se
@@ -105,6 +107,7 @@ export default function SignInForm() {
             <LineAndTextSeparator label="Ou" />
             <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-5">
               <Button
+                onClick={() => navigate("/")}
                 className="w-full"
                 variant="secondary"
                 size="sm"

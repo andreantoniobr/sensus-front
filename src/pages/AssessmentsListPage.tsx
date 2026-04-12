@@ -178,7 +178,7 @@ const atividades: Atividade[] = [
   }, [tab, atividades]);
 
   return (
-    <div className="p-6 space-y-6">
+    <div className="space-y-6">
       <PageMeta
         title="Atividades Avaliativas | Sensus"
         description="Provas, trabalhos e modo treino — tudo em um só lugar."

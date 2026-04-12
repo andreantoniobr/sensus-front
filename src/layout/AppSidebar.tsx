@@ -38,11 +38,11 @@ const navItems: NavItem[] = [
     subItems: [
       {
         name: "Login",
-        path: "/signin",
+        path: "/login",
       },
       {
         name: "Cadastro",
-        path: "/signup",
+        path: "/cadastro",
       },
       {
         name: "Adicionar Critério",
@@ -53,9 +53,25 @@ const navItems: NavItem[] = [
         path: "/adicionar-questao",
       },
       {
-        name: "adicionar Avaliação",
+        name: "Adicionar Avaliação",
         path: "/adicionar-avaliacao",
-      },      
+      },    
+      {
+        name: "Criar Lista de Questões",
+        path: "/adicionar-lista-questoes",
+      },    
+      {
+        name: "Responder Questão",
+        path: "/responder-questao",
+      },  
+      {
+        name: "Análise de Resposta IA",
+        path: "/analise-ia-resposta",
+      },  
+       {
+        name: "Questões",
+        path: "/listas/questoes",
+      }, 
       {
         name: "404 Error",
         path: "/error-404",
@@ -75,7 +91,7 @@ const navItems: NavItem[] = [
   {
     icon: <HiOutlineChartBar />,
     name: "Notas",
-    path: "/construcao",
+    path: "/notas",
   },
   {
     icon: <HiOutlineCodeBracket />,
@@ -85,7 +101,7 @@ const navItems: NavItem[] = [
   {
     icon: <HiOutlineChartPie />,
     name: "Meu Progresso",
-    path: "/progresso",
+    path: "/meu-progresso",
   },
   {
     icon: <HiOutlineCalendarDays />,
